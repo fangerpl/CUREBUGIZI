@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Co chcesz zrobic? SUMA/KONIEC");
+            string odpowiedz = Console.ReadLine();
+            
+            do
+            {
+                if (odpowiedz == "SUMA")
+                {
+                    int i = 0;
+                    int suma = 0;
+
+
+                    Console.WriteLine("Podaj liczbe do KTÓREJ liczyc: ");
+                    int liczba = Int32.Parse(Console.ReadLine());
+
+                    do
+                    {
+                        suma = suma + i;
+                        i++;
+
+                    } while (i <= liczba);
+                    Console.WriteLine("Suma liczb wynosi: {0}", suma);
+
+                    Console.WriteLine("\n Co chcesz zrobic? SUMA/KONIEC");
+                    odpowiedz = Console.ReadLine();
+
+                }
+                else if (odpowiedz != "KONIEC")
+                {
+                    Console.WriteLine("Niestety, cos poszlo nie tak.. :c");
+                }
+            } while (odpowiedz == "SUMA");
+
+            Console.WriteLine("Dziękujemy dobranoc! I daj wincej pinionszkuf!");
+            Console.ReadKey();
+
+
+        }
+    }
+}
